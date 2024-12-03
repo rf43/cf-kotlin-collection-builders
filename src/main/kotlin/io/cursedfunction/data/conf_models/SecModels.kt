@@ -56,18 +56,18 @@ val secSchools = listOf(
     ),
     SchoolModel(
         longName = "University of Missouri",
-        nickname = "MIZZ",
-        tricode = "Missouri Tigers",
+        nickname = "Missouri Tigers",
+        tricode = "MIZZ",
     ),
     SchoolModel(
         longName = "University of Oklahoma",
-        nickname = "OU",
-        tricode = "Oklahoma Sooners",
+        nickname = "Oklahoma Sooners",
+        tricode = "OU",
     ),
     SchoolModel(
         longName = "University of South Carolina",
-        nickname = "SCAR",
-        tricode = "South Carolina Gamecocks",
+        nickname = "South Carolina Gamecocks",
+        tricode = "SCAR",
     ),
     SchoolModel(
         longName = "University of Tennessee",

@@ -1,12 +1,20 @@
 package io.cursedfunction.runner2
 
-import io.cursedfunction.data.ncaaDiv1FootballMap
+import io.cursedfunction.data.conf_models.accConference
+import io.cursedfunction.data.conf_models.accSchools
+import io.cursedfunction.data.conf_models.secConference
+import io.cursedfunction.data.conf_models.secSchools
 
 fun main() {
     println()
+
     buildPrintList(
-        conferenceWithSchools = ncaaDiv1FootballMap,
+        conferenceModel = accConference,
+        schoolModels = accSchools,
+    ).forEach(::println)
+
+    buildPrintList(
+        conferenceModel = secConference,
+        schoolModels = secSchools,
     ).forEach(::println)
 }
-
-

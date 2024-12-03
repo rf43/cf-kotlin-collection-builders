@@ -82,12 +82,12 @@ val accSchools = listOf(
     ),
     SchoolModel(
         longName = "Virginia Polytechnic Institute and State University",
-        nickname = "VT",
-        tricode = "Virginia Tech Hokies",
+        nickname = "Virginia Tech Hokies",
+        tricode = "VT",
     ),
     SchoolModel(
         longName = "Wake Forest University",
-        nickname = "WF",
-        tricode = "Wake Forest Demon Deacons",
+        nickname = "Wake Forest Demon Deacons",
+        tricode = "WF",
     )
 )

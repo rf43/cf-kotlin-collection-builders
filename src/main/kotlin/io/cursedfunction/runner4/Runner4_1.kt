@@ -1,14 +1,26 @@
 package io.cursedfunction.runner4
 
-import io.cursedfunction.data.ncaaDiv1FootballMap
+import io.cursedfunction.data.conf_models.accConference
+import io.cursedfunction.data.conf_models.accSchools
+import io.cursedfunction.data.conf_models.secConference
+import io.cursedfunction.data.conf_models.secSchools
 
 fun main() {
-    val result = buildPrintList(
-        conferenceWithSchools = ncaaDiv1FootballMap
+    val accResult = buildPrintList(
+        conferenceModel = accConference,
+        schoolModels = accSchools,
     )
 
-    (result as MutableList<String>)[0] = "FAKE CONFERENCE!!!"
+    val secResult = buildPrintList(
+        conferenceModel = secConference,
+        schoolModels = secSchools,
+    )
+
+    if (secResult is MutableList<String>) {
+        secResult[0] = "FAKE CONFERENCE!!!"
+    }
 
     println()
-    result.forEach(::println)
+    accResult.forEach(::println)
+    secResult.forEach(::println)
 }
