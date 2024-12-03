@@ -11,16 +11,38 @@ fun main() {
         schoolModels = accSchools,
     )
 
-    val secResult = buildPrintList(
-        conferenceModel = secConference,
-        schoolModels = secSchools,
-    )
+//    val secResult = buildPrintList(
+//        conferenceModel = secConference,
+//        schoolModels = secSchools,
+//    )
 
-    if (secResult is MutableList<String>) {
-        secResult[0] = "FAKE CONFERENCE!!!"
-    }
+    // This will result in an UnsupportedOperationException
+//    if (secResult is MutableList) {
+//        secResult[0] = "FAKE CONFERENCE!!!"
+//    }
+
+    // This will also result in an UnsupportedOperationException
+//    (secResult as MutableList<String>)[0] = "FAKE CONFERENCE!!!"
+
+    // -------------------------------------------------------------
+
+    // However, if you were to add .toList() the result
+    // it will allow you to modify the list
+//    val secResult = buildPrintList(
+//        conferenceModel = secConference,
+//        schoolModels = secSchools,
+//    ).toList()
+
+    // Now this will work!
+//    if (secResult is MutableList) {
+//        secResult[0] = "FAKE CONFERENCE!!!"
+//    }
+
+    // This will also work!
+//    (secResult as MutableList<String>)[0] = "FAKE CONFERENCE!!!"
+
 
     println()
     accResult.forEach(::println)
-    secResult.forEach(::println)
+//    secResult.forEach(::println)
 }
