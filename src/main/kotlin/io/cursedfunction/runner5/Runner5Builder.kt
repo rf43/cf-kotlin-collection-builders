@@ -5,6 +5,8 @@ import io.cursedfunction.data.SchoolModel
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
+// Same as Runner4Builder, but returns an ImmutableList
+
 internal fun buildPrintList(
     conferenceModel: ConferenceModel,
     schoolModels: List<SchoolModel>,

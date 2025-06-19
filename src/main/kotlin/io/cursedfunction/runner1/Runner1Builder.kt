@@ -1,5 +1,11 @@
 package io.cursedfunction.runner1
 
+// Just a hardcoded list of strings to print out
+// Not a good approach, but it works
+// Sometimes, however, this method can be a valid approach when needing to
+// quickly prototype something or for very small datasets like you might
+// find in a coding exercise or test.
+
 internal fun buildPrintList(): List<String> {
     return listOf(
         "Atlantic Coast Conference - ACC",

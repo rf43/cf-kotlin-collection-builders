@@ -17,13 +17,20 @@ fun main() {
     )
 
     // This will throw a ClassCastException runtime error
-    (secResult as MutableList<String>)[0] = "FAKE CONFERENCE!!!"
+    // because the list that is returned is not a MutableList
+    // it is an ImmutableList (actually PersistentList) from the
+    // kotlinx.collections.immutable package, which is not a subtype
+    // of MutableList. It is more a sibling of MutableList in the type hierarchy.
+    (secResult as MutableList<String>).set(0, "FAKE CONFERENCE!!!")
 
-    // This will trick you into thinking it will do something
-    // but it will disappoint you and do nothing!
+
+    // However, this will trick you into thinking it works
+    // because the ClassCastException will be swallowed by
+    // the nullable cast failure, but it will actually do nothing
+    // and leave you disappointed.
     (secResult as? MutableList<String>)?.set(0, "FAKE CONFERENCE!!!")
 
-    println()
     accResult.forEach(::println)
     secResult.forEach(::println)
+    println()
 }

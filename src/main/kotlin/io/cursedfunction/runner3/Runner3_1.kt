@@ -16,6 +16,7 @@ fun main() {
         schoolModels = secSchools,
     )
 
+    // This will mutate the list and add "FAKE CONFERENCE!!!" to the front of the secResult list
     if (secResult is MutableList<String>) {
         secResult[0] = "FAKE CONFERENCE!!!"
     }

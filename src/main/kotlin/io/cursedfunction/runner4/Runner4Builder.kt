@@ -3,6 +3,10 @@ package io.cursedfunction.runner4
 import io.cursedfunction.data.ConferenceModel
 import io.cursedfunction.data.SchoolModel
 
+// While we are using List<T> here, the list is not actually immutable.
+// To see how it is possible to mutate the list that is returned,
+// see the code and comments in Runner4_1.kt
+
 internal fun buildPrintList(
     conferenceModel: ConferenceModel,
     schoolModels: List<SchoolModel>,
